@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -24,6 +24,5 @@ void	*ft_memset(void *b, int c, size_t len)
 		*(aux + i) = (unsigned char) c;
 		i++;
 	}
-	b = aux;
 	return (b);
 }

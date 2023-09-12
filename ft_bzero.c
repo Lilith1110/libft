@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*aux;
+	unsigned char	*aux;
 	size_t	i;
 
 	if (n != 0)
@@ -26,6 +26,5 @@ void	ft_bzero(void *s, size_t n)
 			*(aux + i) = '0';
 			i++;
 		}
-		s = aux;
 	}
 }

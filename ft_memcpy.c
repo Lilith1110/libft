@@ -10,8 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	size_t			i;
+	unsigned char	*auxdst;
+	unsigned char	*auxsrc;
 
+	auxdst = (unsigned char *)dst;
+	auxsrc = (unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		*(auxdst + i) = *(auxsrc + i);
+		i++;
+	}
 	return (dst);
 }
