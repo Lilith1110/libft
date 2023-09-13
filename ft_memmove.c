@@ -6,13 +6,11 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:30:19 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/12 12:34:01 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:29:28 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include <string.h>
-#include <stdio.h>
 
 void    *ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -23,12 +21,12 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	auxsrc = (char *)src;
 	if (*auxdst != '\0' && *auxsrc != '\0' && len > 0)
 	{
-		printf("holi\n");
+		len++;
 	}
 	return (dst);
 }
 
-int	main (void)
+/*int	main (void)
 {
 	char	str[50] = "hola que tal";
 	printf("FUNCION LIBRERIA\n");
@@ -40,4 +38,4 @@ int	main (void)
 	printf("dst: %s\n", str2 + 5);
 	printf("src: %s\n", str2);
 	printf("%s\n", ft_memmove(str2 + 5, str2, 8));
-}
+}*/

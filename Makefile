@@ -6,11 +6,15 @@
 #    By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 10:29:24 by lsalah-d          #+#    #+#              #
-#    Updated: 2023/09/13 10:29:52 by lsalah-d         ###   ########.fr        #
+#    Updated: 2023/09/13 19:25:00 by lilith           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = #cambiar por mis funciones#
+SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
+      ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
+      ft_memmove.c ft_memset.c ft_strchr.c ft_strdup.c ft_strjoin.c\
+      ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c\
+      ft_strrchr.c ft_substr.c ft_tolower.c ft_toupper.c
 
 OBJS = $(SRC:.c=.o)
 
@@ -20,14 +24,15 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
+INCLUDE = libft.h
+
 all: $(NAME)
 
+$(NAME): $(OBJS) $(INCLUDE)
+	ar rc $(NAME) $(OBJS)
+
 %.o: %.c
-	$(CC) $(CFLAGS) -c $(SRC)
-
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
-
+	$(CC) $(CCFLAGS) -c -o $@ $<
 clean:
 	rm -f $(OBJS)
 

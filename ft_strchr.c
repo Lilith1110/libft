@@ -6,11 +6,11 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 09:56:32 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/12 10:42:58 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:37:24 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*aux;
 

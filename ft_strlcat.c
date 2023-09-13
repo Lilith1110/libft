@@ -6,13 +6,13 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:10:00 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/13 10:10:37 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:34:25 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	len_src;
 	size_t	len_dst;

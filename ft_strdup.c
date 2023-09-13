@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:43:34 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/13 10:44:01 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/13 16:27:51 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ char	*ft_strdup(const char *s1)
 	dup = (char *)malloc(size * sizeof(char));
 	if (!dup)
 		return (NULL);
-	return (ft_strlcpy(dup, s1, size));
+	ft_strlcpy(dup, s1, size);
+	return (dup);
 }
