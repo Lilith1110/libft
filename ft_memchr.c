@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 09:22:18 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/12 09:23:44 by lsalah-d         ###   ########.fr       */
+/*   Created: 2023/09/13 09:33:05 by lsalah-d          #+#    #+#             */
+/*   Updated: 2023/09/13 09:33:34 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include <stddef.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	char			*auxs;
+	unsigned char	auxc;
+
+	auxc = (unsigned char)c;
+	auxs = (char *)s;
+	while (n > 0 && *auxs != '\0' && *auxs != auxc)
+	{
+		n--;
+		auxs++;
+	}
+	if (*auxs == auxc)
+		return (auxs);
 	return (0);
 }

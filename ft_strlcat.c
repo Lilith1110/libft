@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 10:53:52 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/12 11:36:13 by lsalah-d         ###   ########.fr       */
+/*   Created: 2023/09/13 10:10:00 by lsalah-d          #+#    #+#             */
+/*   Updated: 2023/09/13 10:10:37 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+size_t	strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
-	char	*str;
+	size_t	len_src;
+	size_t	len_dst;
 
-	str = 0;
-	str = (char *)haystack;
-	if (*needle == '\0')
-		return (str);
-	i = 0;
-	while (haystack[i] != '\0')
+	len_src = 0;
+	len_dst = 0;
+	while (src[len_src] != '\0')
+		len_src++;
+	while (dst[len_dst] != '\0')
+		len_dst++;
+	if (dstsize == 0 || dstsize <= len_dst)
+		return (len_src + dstsize);
+	while (len_dst < dstsize - 1 && *src != '\0')
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j] && j < len)
-		{
-			if (needle[j + 1] == '\0' && j + 1 == len - 1)
-			{
-				str = (char *)(haystack + i);
-				return (str);
-			}
-			j++;
-		}
-		i++;
+		dst[len_dst] = *src;
+		len_dst++;
+		src++;
 	}
-	return (0);
+	dst[len_dst] = '\0';
+	return (dstsize + len_src);
 }

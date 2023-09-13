@@ -10,16 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-    char    *aux;
+	char	*aux;
 
-    aux = (char *)s;
-    while (*aux != '\0')
-        aux++;
-    while (aux != s && *aux != c)
-        aux--;
-    if (*aux == c)
-      return (aux);
-    return (0);
+	aux = (char *)s;
+	while (*aux != '\0')
+		aux++;
+	while (aux != s && *aux != c)
+		aux--;
+	if (*aux == c)
+		return (aux);
+	return (0);
 }
