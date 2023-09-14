@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:10:00 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/13 16:34:25 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:24:35 by lilith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		src++;
 	}
 	dst[len_dst] = '\0';
-	return (dstsize + len_src);
+	return (len_dst + len_src);
 }

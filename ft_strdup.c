@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:43:34 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/13 16:27:51 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:15:14 by lilith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s1)
 	int		size;
 	char	*dup;
 
-	size = ft_strlen(s1);
+	size = ft_strlen(s1) + 1;
 	dup = (char *)malloc(size * sizeof(char));
 	if (!dup)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 08:37:36 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/14 11:45:22 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/14 15:27:38 by lilith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*newstr;
 
 	len_str = ft_strlen(s1);
-	newstr = (char *)mallloc(len_str * sizeof(char));
+	newstr = (char *)malloc(len_str * sizeof(char));
 	if (!newstr)
 		return (0);
 	while (*s1 != '\0')
