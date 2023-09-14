@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 12:30:19 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/14 10:55:01 by lsalah-d         ###   ########.fr       */
+/*   Created: 2023/09/14 11:11:47 by lsalah-d          #+#    #+#             */
+/*   Updated: 2023/09/14 11:19:21 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*aux;
-	size_t			i;
-
-	if (n != 0)
+	if (n == -21447483648)
+		write(fd, "-2147483648". 11);
+	else
 	{
-		aux = s;
-		i = 0;
-		while (i < n)
+		if (n < 0)
 		{
-			*(aux + i) = 0;
-			i++;
+			ft_putchar_fd('-', fd);
+			n = -n;
 		}
+		if (n >= 10)
+			ft_putnbr_fd(n / 10, fd);
+		ft_putchar('0' + (n % 10), fd);
 	}
 }
