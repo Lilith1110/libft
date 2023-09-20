@@ -6,7 +6,7 @@
 #    By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 10:29:24 by lsalah-d          #+#    #+#              #
-#    Updated: 2023/09/17 17:07:12 by lilith           ###   ########.fr        #
+#    Updated: 2023/09/20 08:49:48 by lsalah-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ BONUSOBJ = $(BONUSSRC:.c=.o)
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra -Werror
+CCFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 
@@ -39,8 +39,8 @@ all: $(NAME)
 $(NAME): $(OBJS) $(INCLUDE)
 	ar rc $(NAME) $(OBJS)
 
-bonus: $(OBJ) $(BONUSOBJ) $(INCLUDE)
-	ar rc $(NAME) $(BONUSOBJ) $(OBJ)
+bonus: $(OBJS) $(BONUSOBJ) $(INCLUDE)
+	ar rc $(NAME) $(BONUSOBJ) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CCFLAGS) -c -o $@ $<
@@ -53,7 +53,3 @@ fclean: clean
 re: fclean all
 
 rebonus: fclean bonus
-
-so:
-	$(CC) -fPIC $(CFLAGS) $(SRC)
-	gcc -shared -o libft.so $(OBJ)

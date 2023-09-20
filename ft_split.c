@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 09:34:53 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/15 17:10:53 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/20 08:33:37 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static char	**aux_split(char const *s, char c, char **array, int strs)
 	j = 0;
 	while (i < strs)
 	{
-		while (s[j] != '\0'  && s[j] == c)
+		while (s[j] != '\0' && s[j] == c)
 			j++;
 		array[i] = ft_substr(s, j, get_str_len(&s[j], c));
 		if (!array[i])
@@ -81,7 +81,7 @@ static char	**aux_split(char const *s, char c, char **array, int strs)
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int	strs;
+	int		strs;
 
 	strs = count_strs(s, c);
 	array = (char **)malloc((strs + 1) * sizeof(char *));

@@ -6,16 +6,16 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 08:38:49 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/17 08:48:29 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/20 08:32:35 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	len;
-	char	*str;
+	size_t			len;
+	char			*str;
 	unsigned int	i;
 
 	len = ft_strlen(s);

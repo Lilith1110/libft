@@ -6,13 +6,13 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 09:40:25 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/17 09:44:40 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/20 08:34:26 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
