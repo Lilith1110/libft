@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 08:57:40 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/20 11:38:35 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/20 12:03:02 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,23 @@ int	main(void)
 	printf("función original usando ñ: %d\n", isprint(164));
 	printf("FT_STRLEN: \n");
 	printf("mi función usando la cadena vacia: %zu\t", ft_strlen(""));
-	printf("mi función usando la cadena vacia: %lu\n", strlen(""));
+	printf("función original usando la cadena vacia: %lu\n", strlen(""));
 	printf("mi función usando patata: %zu\t", ft_strlen("patata"));
-	printf("mi función usando patata: %lu\n", strlen("patata"));
+	printf("función original usando patata: %lu\n", strlen("patata"));
 	printf("FT_MEMSET: \n");
 	printf("FT_BZERO: \n");
 	printf("FT_MEMCPY: \n");
 	printf("FT_MEMMOVE: \n");
 	printf("FT_STRLCPY: \n");
+	char	dst[30];
+	char	src[] = "hola que tal patata";
+	printf("mi función: resultado: %zu\t, dst: %s\n", ft_strlcpy(dst, src, 13), dst);
+	printf("función original: resultado: %lu\t, dst: %s\n", strlcpy(dst, src, 13), dst);
 	printf("FT_STRLCAT: \n");
+	char    dst1[30] = "patata";
+	char    src1[] = "hola que tal patata";
+	printf("mi función: resultado: %zu\t, dst: %s\n", ft_strlcat(dst1, src1, 26), dst1);
+	printf("función original: resultado: %lu\t, dst: %s\n", strlcat(dst1, src1, 26), dst1);
 	printf("FT_TOUPPER: \n");
 	printf("mi función usando a: %d\t", ft_toupper('a'));
 	printf("función original usando a: %d\n", toupper('a'));
@@ -100,9 +108,18 @@ int	main(void)
 	printf("FT_STRMAPI: \n");
 	printf("FT_STRITERI: \n");
 	printf("FT_PUTCHAR_FD: \n");
+	ft_putchar_fd('h', 1);
+	ft_putchar_fd('o', 1);
+	ft_putchar_fd('l', 1);
+	ft_putchar_fd('a', 1);
+	ft_putchar_fd('\n', 1);
 	printf("FT_PUTSTR_FD: \n");
+	ft_putstr_fd("holiwis\n", 1);
 	printf("FT_PUTENDL_FD: \n");
+	ft_putendl_fd("patata", 1);
 	printf("FT_PUTNBR_FD: \n");
+	ft_putnbr_fd(-2147483648, 1);
+	ft_putchar_fd('\n', 1);
 	printf("------------------------------------\nFUNCIONES BONUS: \n");
 	printf("FT_LSTNEW: \n");
 	printf("FT_LSTADD_FRONT: \n");
