@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:43:12 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/15 08:44:13 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/20 10:34:09 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		s2++;
 		i++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	if (((unsigned char)*s1 - (unsigned char)*s2) > 0)
+		return (1);
+	else if (((unsigned char)*s1 - (unsigned char)*s2) < 0)
+		return (-1);
+	else
+		return (0);
 }
