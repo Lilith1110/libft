@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 08:57:40 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/21 12:24:22 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/21 15:09:35 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	aux(unsigned int i, char c)
 
 void	del(void *content)
 {
-	content = "";
+	content  = NULL;
 }
 
 int	main(void)
@@ -61,13 +61,27 @@ int	main(void)
 	printf("mi función usando patata: %zu\t", ft_strlen("patata"));
 	printf("función original usando patata: %lu\n", strlen("patata"));
 	printf("FT_MEMSET: \n");
-
+	char	b1[20];
+	char	b2[20];
+	printf("mi función: %s\n", (char *)ft_memset(b1, 'a', 10));
+	printf("función original: %s\n", (char *)memset(b2, 'a', 10));
 	printf("FT_BZERO: \n");
-
+	char    b3[20];
+	char    b4[20];
+	ft_bzero(b3, 15);
+	bzero(b4, 15);
+	printf("mi función: %s\n", (char *)b3);
+	printf("función original: %s\n", (char *)b4);
 	printf("FT_MEMCPY: \n");
-
+	char	b5[20] = "aaaaaaaaaaa";
+	char	b6[20] = "patata";
+	printf("mi función: %s\n", (char *)ft_memcpy(b6 + 2, b6, 7));
+	printf("función original: %s\n", (char *)memcpy(b6 + 2, b6, 7));
 	printf("FT_MEMMOVE: \n");
-
+	char    b7[20] = "aaaaaaaaaaa";
+    char    b8[20] = "hola que tal";
+ 	printf("mi función: %s\n", (char *)ft_memcpy(b8 + 2, b8, 7));
+	printf("función original: %s\n", (char *)memcpy(b8 + 2, b8, 7));
 	printf("FT_STRLCPY: \n");
 	char	dst[30];
 	char	src[] = "hola que tal patata";
@@ -102,7 +116,9 @@ int	main(void)
 	printf("mi función usando test200 y test0: %d\t", ft_strncmp("test\200", "test\0", 6));
 	printf("función orginal usando test200 y test0: %d\n", strncmp("test\200", "test\0", 6));
 	printf("FT_MEMCHR: \n");
-
+	char	b9[10] = "patata";
+	printf("mi función: %s\t", (char *)ft_memchr(b9, 't', 4));
+	printf("función orginal: %s\n", (char *)ft_memchr(b9, 't', 4));
 	printf("FT_MEMCMP: \n");
 
 	printf("FT_STRNSTR: \n");
@@ -204,14 +220,14 @@ int	main(void)
 	printf("FT_LSTADD_BACK: \n");
 	ft_lstadd_back(&list, ft_lstnew("3"));
 	printf("la lista tiene %d nodos\n", ft_lstsize(list));
-	 printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
+	printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
 	printf("FT_LSTDELONE: \n");
 	ft_lstdelone(ft_lstlast(list), del);
-	 printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
+	printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
 	printf("la lista tiene %d nodos\n", ft_lstsize(list));
 	printf("FT_LSTCLEAR: \n");
-	 printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
-	ft_lstclear(&list, del);
+	printf("el ultimo nodo contiene: %s\n", ft_lstlast(list)->content);
+	//ft_lstclear(&list, del);
 	printf("la lista tiene %d nodos\n", ft_lstsize(list));
 	printf("FT_LSTITER: \n");
 
