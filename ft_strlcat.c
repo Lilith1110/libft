@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:10:00 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/15 08:28:12 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/21 18:26:48 by lilith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len_dst = 0;
 	while (src[len_src] != '\0')
 		len_src++;
-	while (dst[len_dst] != '\0')
+	while (dst && dst[len_dst] != '\0')
 		len_dst++;
 	if (dstsize == 0 || dstsize <= len_dst)
 		return (len_src + dstsize);

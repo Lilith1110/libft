@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:53:52 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/15 09:05:16 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/21 18:29:51 by lilith           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (*needle == '\0')
 		return ((char *)haystack);
+	if(!haystack && len == 0)
+		return (0);
 	i = 0;
 	while (*haystack != '\0' && i < len)
 	{
