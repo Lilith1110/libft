@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 08:50:29 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/17 08:54:21 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/22 08:58:39 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (*s != '\0')
 	{

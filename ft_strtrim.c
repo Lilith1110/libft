@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 08:37:36 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/16 12:26:34 by lilith           ###   ########.fr       */
+/*   Updated: 2023/09/22 08:55:07 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	size_t	i;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	while (s1[start] && char_in_set(s1[start], set))
 		start++;

@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 09:34:53 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/20 08:33:37 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 09:00:33 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,8 @@ char	**ft_split(char const *s, char c)
 	char	**array;
 	int		strs;
 
+	if (!s)
+		return (NULL);
 	strs = count_strs(s, c);
 	array = (char **)malloc((strs + 1) * sizeof(char *));
 	if (!array)

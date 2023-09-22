@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:04:31 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/14 11:06:47 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 09:04:37 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s != '\0')
 	{
 		write(fd, s, 1);

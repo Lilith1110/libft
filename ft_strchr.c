@@ -6,18 +6,20 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 09:56:32 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/13 16:37:24 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 09:53:15 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strchr(const char *s, int c)
 {
 	char	*aux;
+	char	caux;
 
+	caux = (char)c;
 	aux = (char *)s;
-	while (*aux != '\0' && *aux != c)
+	while (*aux != '\0' && *aux != caux)
 		aux++;
-	if (*aux == c)
+	if (*aux == caux)
 		return (aux);
 	return (0);
 }
