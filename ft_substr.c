@@ -6,7 +6,7 @@
 /*   By: lsalah-d <lsalah-d@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 10:58:21 by lsalah-d          #+#    #+#             */
-/*   Updated: 2023/09/22 12:17:50 by lsalah-d         ###   ########.fr       */
+/*   Updated: 2023/09/22 15:30:11 by lsalah-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (start > size)
 		aux = (char *)malloc(1 * sizeof(char));
 	else if (size >= len + start)
-    	aux = (char *)malloc((len + 1) * sizeof(char));
-    else
-    	aux = (char *)malloc((size + 1) * sizeof(char));
+		aux = (char *)malloc((len + 1) * sizeof(char));
+	else
+		aux = (char *)malloc((size + 1) * sizeof(char));
 	if (!aux)
 		return (NULL);
 	i = 0;
